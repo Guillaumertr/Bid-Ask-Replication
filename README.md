@@ -18,7 +18,9 @@ The goal is to analyze and implement two pricing and hedging methods in the pres
 ### 1. Delta Hedging with Bid-Ask Spread
 - At each rebalancing date, a hedge is placed based on the current delta.
 - The **transaction cost is explicitly computed** for each rebalance as:
-  $$\text{Cost} = \text{bid-ask spread} \times | \Delta_t - \Delta_{t-1} | \times S_t$$
+$$
+\text{Cost} = \text{bid-ask spread} \times | \Delta_t - \Delta_{t-1} | \times S_t
+$$
 - This approach reflects the real trading cost incurred when adjusting the hedge.
 
 ### 2. ⚡ Leland Volatility Adjustment
@@ -26,6 +28,7 @@ Instead of modeling transaction costs directly, we **adjust the volatility** use
 
 The **effective volatility** becomes:
 $$\sigma_L = \sigma \left(1 + \sqrt{\frac{2}{\pi}} \frac{c}{\sigma} \sqrt{\Delta t} \right)$$
+
 Where:
 - $\sigma$ is the original volatility.
 - $c$ is the proportional cost per unit traded.
