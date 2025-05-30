@@ -18,9 +18,7 @@ The goal is to analyze and implement two pricing and hedging methods in the pres
 ### 1. Delta Hedging with Bid-Ask Spread
 - At each rebalancing date, a hedge is placed based on the current delta.
 - The **transaction cost is explicitly computed** for each rebalance as:
-  $
-  \text{Cost} = \text{bid-ask spread} \times | \Delta_t - \Delta_{t-1} | \times S_t
-  $
+  $\text{Cost} = \text{bid-ask spread} \times | \Delta_t - \Delta_{t-1} | \times S_t$
 - This approach reflects the real trading cost incurred when adjusting the hedge.
 
 ### 2. ⚡ Leland Volatility Adjustment
@@ -61,3 +59,15 @@ This modified volatility inflates the option price to **preemptively compensate 
 ## 🧠 References
 
 - Leland, H. E. (1985). "Option pricing and replication with transactions costs." *The Journal of Finance*.
+
+## 👤 Author
+
+👨‍💻 Guillaume Routier  
+🎓 MSc Probabilité & Finance – École Polytechnique & Sorbonne Université  
+📬 [Contact me on LinkedIn](https://www.linkedin.com/in/guillaume-routier/)
+
+---
+
+## 📌 Disclaimer
+
+These notebooks are for educational and demonstrative purposes only. They do not constitute financial advice.
