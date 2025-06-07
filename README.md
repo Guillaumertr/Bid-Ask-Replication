@@ -1,10 +1,10 @@
-# 📈 Bid-Ask Replication with Transaction Costs
+# Bid-Ask Replication with Transaction Costs
 
 This notebook focuses on replicating a **European call option** in a market with **proportional transaction costs**, i.e., where a spread exists between the bid and ask prices. In this context, the classical Black-Scholes Delta hedging must be adapted.
 
 ---
 
-## 🔍 Objective
+## Objective
 
 The goal is to analyze and implement two pricing and hedging methods in the presence of transaction costs :
 
@@ -13,7 +13,7 @@ The goal is to analyze and implement two pricing and hedging methods in the pres
 
 ---
 
-## 🛠️ Methodology
+## 🛠Methodology
 
 ### 1. Delta Hedging with Bid-Ask Spread
 - At each rebalancing date, a hedge is placed based on the current delta.
@@ -23,7 +23,7 @@ $$\text{Cost} = \text{bid-ask spread} \times | \Delta_t - \Delta_{t-1} | \times 
 
 - This approach reflects the real trading cost incurred when adjusting the hedge.
 
-### 2. ⚡ Leland Volatility Adjustment
+### 2. Leland Volatility Adjustment
 Instead of modeling transaction costs directly, we **adjust the volatility** used in the Black-Scholes model. This is based on the approach proposed by **Leland (1985)**.
 
 The **effective volatility** becomes :
@@ -39,7 +39,7 @@ This modified volatility inflates the option price to **preemptively compensate 
 
 ---
 
-## 📊 Outputs
+## Outputs
 
 - Replication profit and loss with and without transaction costs.
 - Comparison between:
@@ -50,7 +50,7 @@ This modified volatility inflates the option price to **preemptively compensate 
 
 ---
 
-## ✅ Key Takeaways
+## Key Takeaways
 
 - In the presence of bid-ask spreads, classical delta-hedging results in **systematic losses** if not adjusted.
 - Leland’s approach provides a **robust approximation** and is computationally efficient.
@@ -58,18 +58,18 @@ This modified volatility inflates the option price to **preemptively compensate 
 
 ---
 
-## 🧠 References
+## References
 
 - Leland, H. E. (1985). "Option pricing and replication with transactions costs." *The Journal of Finance*.
 
-## 👤 Author
+## Author
 
-👨‍💻 Guillaume Routier  
-🎓 MSc Probabilité & Finance – École Polytechnique & Sorbonne Université  
-📬 [Contact me on LinkedIn](https://www.linkedin.com/in/guillaume-routier/)
+Guillaume Routier  
+MSc Probabilité & Finance – École Polytechnique & Sorbonne Université  
+[Contact me on LinkedIn](https://www.linkedin.com/in/guillaume-routier/)
 
 ---
 
-## 📌 Disclaimer
+## Disclaimer
 
 These notebooks are for educational and demonstrative purposes only. They do not constitute financial advice.
